@@ -1,0 +1,83 @@
+[09:58, 10/9/2024] Nicolas Malukinho: <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <title>UMA NOITE DE HALLOWEEN</title>
+</head>
+<body>
+    <main>
+        <div class="passo ativo" id="passo-0">
+            <img src="img/cenario-passo0.png" alt="">
+            <p>Em uma noite de halloween haviam três crianças andando pelas ruas atrás de doces, até que pararam em uma casa que era extremamente assustadora mas as crinaças queriam exploram o ambiente</p>
+            <button class="btn-proximo" data-proximo="1">bater na porta</button>
+            <button class="btn-proximo" data-proximo="2">entrar sem bater</button>
+        </div>
+        <div class="passo" id="passo-1">
+            <p>A porta esta trancada. as crinaças caminham ate o fundo e encontram um porão e uma outra porta .</p>
+            <button class="btn-proximo" data-proximo="3">ir na porta do fundo</button>
+            <button class="btn-proximo" data-proximo="4">ir no porão</button>
+        </div>
+        <div class="passo" id="passo-2">
+            <p>Assim que as crianças entram se deparam com a casa completamente abandonada, as crianças dcidem exploram o ambiente  
+            </p>
+            <button class="btn-proximo" data-proximo="5">olhar a cozinha</button>
+            <button class="btn-proximo" data-proximo="6">ir para os quartos</button>
+        </div>
+        <div class="passo" id="passo-3">
+            <p>a porta  do fundo estava aberta, entao as crianças entram
+                </p>
+            <button class="btn-proximo" data-proximo="7"></button>
+        </div>
+
+        <div class="passo" id="passo-4">
+            <img src="img/cenario-passo4-voltar-casa.png" alt="imagem voltando para casa e desitindo da aventura">
+            <p>Assim que chegaram no porao as crianças tentaram entrar... mas falharam na missao.
+                </p>
+        </div>
+
+        <div class="passo" id="passo-5">
+            <p>enquanto caminham ate a cozinha... elas se deparam com um quartinho cheio de brinquedos</p>
+            <button class="btn-proximo" data-proximo="7">entrar no  quartinho</button>
+        </div>
+
+        <div class="passo" id="passo-6">
+            <p> ir para os quartos</p>
+            <button class="btn-proximo" data-proximo="8">explorar os quartos do corredor direito</button>
+        </div>
+
+        <div class="passo" id="passo-7">
+            <p> o quartinho havia muitos brinquedos... porém o inesperado aconteceu...um monstro apareceu na porta do quartinho e entao....</p>
+            <button class="btn-proximo" data-proximo="9">pegar os doces e ir embora</button>
+            <button class="btn-proximo" data-proximo="10">ver se tem alguém na casa</button>
+        </div>
+
+        <div class="passo" id="passo-8">
+            <p>As crianças encontraram um quarto cheio de palhaços...</p>
+            <button class="btn-proximo" data-proximo="7">entrar no quarto</button>
+        </div>
+
+        <div class="passo" id="passo-9">
+            <p>Assim que as crianças pegam os docês elas vão em direçao a porta..... até que....</p>
+            <button class="btn-proximo" data-proximo="11">correr em direção a porta</button>
+        </div>
+ 
+        div class="passo" id="passo-11"> ela vao embora da casa .</p>
+        <button class=
+       
+        <div clas…
+[09:58, 10/9/2024] Nicolas Malukinho: const avanca = document.querySelectorAll('.btn-proximo');
+
+avanca.forEach(button => {
+    button.addEventListener('click', function(){
+        const atual = document.querySelector('.ativo');
+        const proximoPasso = 'passo-' + this.getAttribute('data-proximo');
+
+        atual.classList.remove('ativo');
+        document.getElementById(proximoPasso).classList.add('ativo');
+    })
+})
